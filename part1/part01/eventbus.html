@@ -15,7 +15,7 @@
         Vue.component(
           'child-component', {
             props: ['propsdata'],
-            template: '<button v-on:click="showLog">show</button>',
+            template: '<div><p>{{propsdata}}</p><button v-on:click="showLog">show</button></div>',
             methods: {
               showLog: function(){
                 this.$emit('show-log');
