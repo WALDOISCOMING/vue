@@ -1,17 +1,24 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/first', function (req, res) {
-  res.json({id: 1, name: 'first'});
+router.get('/user/:id', function (req, res) {
+  const obj ={
+    id : req.params.id,
+    name : "NN",
+    age : 30,
+    job : "dev",
+    city : "NY"
+  };
+  res.json(obj);
 });
 
 module.exports = router;
 
-router.get('/user/:id', function(req, res, next) {
-  const id = req.params.id;
-  const user = { id, name: 'kenu' };
-  res.json({ title: 'Get', user });
-});
+// router.get('/user/:id', function(req, res, next) {
+//   const id = req.params.id;
+//   const user = { id, name: 'kenu' };
+//   res.json({ title: 'Get', user });
+// });
 
 router.post('/user', function(req, res, next) {
   const id = req.body.id;
