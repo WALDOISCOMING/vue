@@ -2,15 +2,19 @@
   <div id="app">
     <HeaderModule></HeaderModule>
     <router-view></router-view>
+    <ApiClient></ApiClient>
   </div>
 </template>
 
 <script>
 import HeaderModule from "./components/HeaderModule.vue"
+import ApiClient from './components/ApiClient.vue'
+
 export default {
   name: 'App',
   components: {
-    HeaderModule
+    HeaderModule,
+    ApiClient
   }
 }
 </script>
