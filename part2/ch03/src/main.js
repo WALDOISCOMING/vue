@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from '../src/App.vue'
-import HelloWorld from './components/HelloWorld.vue'
+import MainPage from '../src/pages/MainPage.vue'
 import LoginPage from '../src/pages/LoginPage.vue'
 
 import VueRouter from 'vue-router';
@@ -9,9 +9,9 @@ import VueRouter from 'vue-router';
 
 // 2. Define some routes
 const routes = [
-  { path: "/home", component: HelloWorld ,name: "home", },
+  { path: "/home", component: MainPage ,name: "home", },
   { path: "/login", component: LoginPage ,name: "login", },
-  { path: "/", component: HelloWorld ,name: "home", }
+  { path: "/", component: MainPage ,name: "home", }
 ];
 
 Vue.config.productionTip = false
