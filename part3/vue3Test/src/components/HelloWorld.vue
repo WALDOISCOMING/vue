@@ -41,7 +41,7 @@ const count = ref(0);
 </script>
 
 <template>
-
+  <h1>CI/CD test input</h1>
   <ul>
   <li v-for="(item,index) in nameList" :key="index" >
     {{ item }}
